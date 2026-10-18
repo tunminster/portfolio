@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# Tun Hein — Astro portfolio homepage
 
 ```sh
 npm create astro@latest -- --template minimal

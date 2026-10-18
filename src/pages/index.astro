@@ -1,50 +1,77 @@
 ---
-import "../styles/global.css";
+import '../styles/global.css';
+
+const projects = [
+  {
+    number: '01',
+    category: 'AI SYSTEMS · PRODUCTION PLATFORM',
+    title: 'ByTheApp',
+    description: 'Built a real-time AI voice platform that turns customer conversations into business actions—handling restaurant orders, payments, and operational workflows.',
+    details: ['Streaming voice orchestration and LLM tool execution', 'Multi-tenant APIs, retrieval-augmented knowledge, and event-driven processing', 'Real-time operational events and observability'],
+    stack: ['Python', 'FastAPI', 'OpenAI Realtime', 'Qdrant', 'Kafka', 'Azure'],
+    featured: true,
+  },
+  {
+    number: '02',
+    category: 'DISTRIBUTED SYSTEMS · FINANCIAL SERVICES',
+    title: 'Global Reinsurance Platform',
+    description: 'Designed and delivered cloud-native services for a global reinsurance platform at Swiss Re, focusing on reliability, API performance, and independent service deployment.',
+    details: ['Service-oriented backend architecture', 'Asynchronous messaging and resilient integrations', 'Infrastructure automation and production observability'],
+    stack: ['.NET', 'Azure Kubernetes Service', 'Kafka', 'Terraform', 'Redis'],
+    featured: false,
+  },
+  {
+    number: '03',
+    category: 'STREAM PROCESSING · PLATFORM ENGINEERING',
+    title: 'Real-Time Event Monitoring',
+    description: 'Designed an event pipeline for tracking business activity and integration failures across an AI-powered product, with streaming aggregation and operational visibility.',
+    details: ['Business and integration event contracts', 'Kafka-based ingestion and Flink stream processing', 'Operational metrics and analytics-oriented storage'],
+    stack: ['Kafka', 'Apache Flink', 'Kotlin', 'ClickHouse'],
+    featured: false,
+  },
+];
+
+const expertise = [
+  { index: '01', title: 'Distributed systems', copy: 'Service boundaries, messaging, consistency, scalability, resilience, and fault-tolerant design.' },
+  { index: '02', title: 'AI infrastructure', copy: 'Real-time model orchestration, tool calling, retrieval pipelines, and production AI workflows.' },
+  { index: '03', title: 'Cloud platforms', copy: 'Kubernetes, containerized deployments, infrastructure as code, and observability.' },
+  { index: '04', title: 'Product engineering', copy: 'End-to-end ownership from architecture and backend APIs to interfaces and operations.' },
+];
 ---
-
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Tun Hein | Software Engineer</title>
-	</head>
-	<body class="bg-slate-950 text-white min-h-screen">
-    <main class="max-w-4xl mx-auto px-6 py-20">
-      <p class="text-sky-400 mb-4">SOFTWARE ENGINEER</p>
-
-      <h1 class="text-5xl font-bold mb-6">Tun Hein</h1>
-
-      <p class="text-xl text-slate-300 mb-8">
-        Building distributed systems, backend platforms,
-        and AI-powered applications.
-      </p>
-
-      <div class="flex gap-6 mb-16">
-        <a href="https://www.linkedin.com/in/tun-hein"
-           class="text-sky-400">LinkedIn</a>
-        <a href="mailto:tminhein@gmail.com"
-           class="text-sky-400">Email</a>
-      </div>
-
-      <h2 class="text-2xl font-semibold mb-6">
-        Featured Engineering Work
-      </h2>
-
-      <article class="border border-slate-700 rounded-xl p-6">
-        <h3 class="text-xl font-bold mb-3">ByTheApp</h3>
-        <p class="text-slate-300 mb-4">
-          AI-powered business automation platform featuring
-          realtime AI orchestration, custom tool execution,
-          RAG, Kafka event processing, Apache Flink,
-          and cloud-native microservices.
-        </p>
-        <p class="text-sm text-sky-400">
-          Python · FastAPI · Kafka · Flink · Qdrant · Azure
-        </p>
-      </article>
-    </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tun Hein — Software engineer specializing in distributed systems, backend platforms, and production AI applications." />
+    <meta name="theme-color" content="#0b1017" />
+    <title>Tun Hein — Software Engineer · Distributed Systems & AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header wrap">
+        <a class="brand" href="#top" aria-label="Tun Hein homepage"><span class="brand-mark">TH<span>.</span></span><span class="brand-label">ENGINEERING PORTFOLIO</span></a>
+        <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a class="nav-contact" href="mailto:tminhein@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></nav>
+      </header>
+      <main id="top">
+        <section class="hero wrap">
+          <div class="eyebrow"><span class="live-dot"></span> SOFTWARE ENGINEER <span class="eyebrow-line"></span> BAY AREA, CALIFORNIA</div>
+          <h1>Engineering systems<br />that <span class="gradient-text">scale.</span></h1>
+          <div class="hero-bottom"><div><p class="hero-intro">I'm <strong>Tun Hein.</strong> I design and build distributed backend platforms, real-time systems, and production AI applications.</p><div class="hero-actions"><a class="button-primary" href="#work">Explore my work <span>↗</span></a><a class="button-text" href="https://www.linkedin.com/in/tun-hein" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="button-text" href="https://github.com/tunminster" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="hero-aside"><span class="tiny-label">CURRENT FOCUS</span><p>Building reliable software at the intersection of distributed systems, cloud platforms, and applied AI.</p></div></div>
+          <div class="hero-grid" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </section>
+        <section class="section work-section wrap" id="work"><div class="section-heading"><div><div class="section-kicker">01 / SELECTED WORK</div><h2>Built for the<br /><em>real world.</em></h2></div><p>Selected platforms and engineering challenges. The emphasis is on architecture, tradeoffs, and what ships.</p></div>
+          <div class="project-list">{projects.map((project) => <article class:list={['project-card', { featured: project.featured }]}><div class="project-top"><span class="project-number">{project.number} / PROJECT</span><span class="project-category">{project.category}</span></div><div class="project-main"><div><h3>{project.title}</h3><p class="project-description">{project.description}</p></div><div class="project-architecture"><div class="architecture-heading"><span class="architecture-dot"></span> SYSTEM DESIGN NOTES</div>{project.details.map((detail) => <div class="architecture-row"><span aria-hidden="true">↳</span><span>{detail}</span></div>)}</div></div><div class="project-bottom"><div class="tags">{project.stack.map((item) => <span>{item}</span>)}</div><span class="project-indicator" aria-hidden="true">↗</span></div></article>)}</div>
+          <p class="privacy-note">Some production systems are proprietary. Architecture and implementation details are shared at a high level to protect customer and company information.</p>
+        </section>
+        <section class="section expertise-section" id="expertise"><div class="wrap"><div class="section-heading"><div><div class="section-kicker">02 / WHAT I DO</div><h2>Depth across<br /><em>the stack.</em></h2></div><p>I enjoy working on the hard parts: complex workflows, system boundaries, performance, and operating software in production.</p></div><div class="expertise-grid">{expertise.map((item) => <div class="expertise-item"><span>{item.index} /</span><h3>{item.title}</h3><p>{item.copy}</p></div>)}</div></div></section>
+        <section class="section experience-section wrap" id="experience"><div class="section-heading"><div><div class="section-kicker">03 / EXPERIENCE</div><h2>From idea<br />to <em>production.</em></h2></div><p>Engineering experience across healthcare, AI products, financial services, and enterprise platforms.</p></div><div class="experience-list"><div class="experience-row"><div class="experience-meta">CURRENT</div><div><h3>Blue Shield of California</h3><p>Full-Stack Software Engineer · Consulting</p></div><span>Healthcare technology</span></div><div class="experience-row"><div class="experience-meta">FOUNDER</div><div><h3>ByTheApp</h3><p>Founder & Principal Software Engineer</p></div><span>AI voice & business automation</span></div><div class="experience-row"><div class="experience-meta">PREVIOUS</div><div><h3>Swiss Re</h3><p>Senior Software Engineer</p></div><span>Global reinsurance systems</span></div></div></section>
+        <section class="contact-section"><div class="wrap contact-inner"><div class="section-kicker">04 / CONNECT</div><h2>Let's build something<br /><span>meaningful.</span></h2><p>Interested in complex engineering problems, high-impact teams, and thoughtful technical collaboration.</p><a href="mailto:tminhein@gmail.com" class="contact-link">Get in touch <span>↗</span></a></div></section>
+      </main>
+      <footer class="footer wrap"><span>© {new Date().getFullYear()} TUN HEIN</span><span>DESIGNED & BUILT WITH ASTRO</span><div><a href="https://github.com/tunminster" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/tun-hein" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a></div></footer>
+    </div>
   </body>
 </html>
